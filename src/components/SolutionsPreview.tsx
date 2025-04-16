@@ -30,7 +30,7 @@ const SolutionCard: React.FC<SolutionCardProps> = ({
   return (
     <Link to={link} className="group">
       <div
-        className="bg-white rounded-lg p-6 shadow-md h-full transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1 hover:scale-125 reveal stagger-item"
+        className="bg-white rounded-lg p-6 shadow-md h-full transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1 hover:scale-105 reveal stagger-item"
         style={{ animationDelay: `${delay}ms` }}
       >
         <div className="bg-staymore-light-purple rounded-full w-12 h-12 flex items-center justify-center mb-4 mx-auto group-hover:bg-staymore-purple transition-colors duration-300">

@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 
 const Hero: React.FC = () => {
   const phrases = [
-    "Stay More: Where Care Meets Courage",
+    "S C",
     "Stay More: Where Comfort is Power",
     "Stay More: Where Strength is Soft",
   ];
@@ -25,10 +25,30 @@ const Hero: React.FC = () => {
       <div className="container mx-auto px-4 z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in-right">
-            <h1 className="hero-text text-staymore-dark-purple shine transition-opacity duration-1000 ease-in-out mb-4">
-              {phrases[index]}
-            </h1>
-
+            <div className="mb-4">
+              <div className="flex items-center justify-start">
+                <h1 className="hero-text text-staymore-dark-purple shine">S</h1>
+                <TypeAnimation
+                  sequence={["tay More: Where", 1000, "", 500]}
+                  wrapper="h1"
+                  cursor={true}
+                  repeat={Infinity}
+                  className="hero-text text-staymore-dark-purple shine"
+                  speed={1}
+                />
+              </div>
+              <div className="flex items-center justify-start">
+                <h1 className="hero-text text-staymore-dark-purple shine">C</h1>
+                <TypeAnimation
+                  sequence={["are Meets Courage", 1000, "", 500]}
+                  wrapper="h1"
+                  cursor={true}
+                  repeat={Infinity}
+                  className="hero-text text-staymore-dark-purple shine"
+                  speed={1}
+                />
+              </div>
+            </div>
             <p
               className="text-xl font-light mb-6 font-playfair italic text-staymore-dark-purple animate-fade-in"
               style={{ animationDelay: "200ms" }}
@@ -36,7 +56,7 @@ const Hero: React.FC = () => {
               "Stay More. Be More. Because your period deserves more than just a
               product—it deserves understanding."
             </p>
-            <div
+            {/* <div
               className="p-6 bg-staymore-light-purple rounded-xl shadow-lg border-l-4 border-staymore-magenta quote-animate mb-6 bg-clip-padding backdrop-blur-lg transition-all duration-300 hover:scale-105 hover:shadow-pink-200"
               style={{
                 animationDelay: "400ms",
@@ -52,7 +72,7 @@ const Hero: React.FC = () => {
                 <br />
                 We stand aware and fair.”
               </p>
-            </div>
+            </div> */}
 
             <p
               className="mb-8 text-gray-700 leading-relaxed animate-fade-in"
@@ -112,22 +132,27 @@ const Hero: React.FC = () => {
             </div>
           </div>
           <div
-            className="relative z-0 h-[400px] lg:h-[400px] animate-fade-in-left rounded-lg bg-transparent"
+            className="relative z-0 h-[400px] w-auto lg:h-[500px] animate-fade-in-left rounded-lg bg-transparent"
             style={{ mixBlendMode: "multiply" }} // Or try 'screen', 'overlay', etc.
           >
             {/* Background Image */}
             <div
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 rounded-lg bg-transparent"
-              style={{ backgroundImage: "url('/images/img2.jpg')" }}
+              className="absolute inset-0 bg-center bg-no-repeat z-0 rounded-lg"
+              style={{
+                backgroundImage: "url('/images/pic22.png')",
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                backgroundColor: "transparent",
+              }}
               role="img"
               aria-label="Woman feeling confident and comfortable"
             ></div>
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-black/10 z-0 rounded-lg"></div>n
-
+            {/* <div className="absolute inset-0 bg-black/10 z-0 rounded-lg"></div> */}
             {/* Card 1: Empowered Periods */}
-            <div className="group absolute top-10 right-[-20px] animate-slide-in-right bg-white/80 backdrop-blur-sm p-4 pr-6 pl-4 rounded-[20px] shadow-xl flex items-center gap-4 max-w-xs w-[20vw] transition-all duration-300 transform hover:-translate-x-3 z-10 hover:z-20 cursor-pointer">
+            <div className="group absolute top-5 right-[-50px] md:top-10 md:right-[-20px] animate-slide-in-right bg-white/80 backdrop-blur-sm p-4 pr-6 pl-4 rounded-[20px] shadow-xl flex items-center gap-4 max-w-xs w-[250px] md:w-[20vw] transition-all duration-300 transform hover:-translate-x-3 z-10 hover:z-20 cursor-pointer">
               <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-purple-200">
                 <Users className="h-6 w-6 text-purple-600 group-hover:scale-110 transition-transform duration-300" />
               </div>
@@ -140,9 +165,8 @@ const Hero: React.FC = () => {
                 </p>
               </div>
             </div>
-
             {/* Card 2: Kind to Skin */}
-            <div className="group absolute bottom-40 left-[-100px] animate-slide-in-left bg-white/80 backdrop-blur-sm p-4 pr-6 pl-4 rounded-[20px] shadow-xl flex items-center gap-4 max-w-xs w-[20vw] transition-all duration-300 transform hover:translate-x-3 z-10 hover:z-20 cursor-pointer ">
+            <div className="group absolute md:bottom-32 md:md:left-[-20px] bottom-20 w-[250px] left-[-30px] animate-slide-in-left bg-white/80 backdrop-blur-sm p-4 pr-6 pl-4 rounded-[20px] shadow-xl flex items-center gap-4 max-w-xs md:w-[20vw] transition-all duration-300 transform hover:translate-x-3 z-10 hover:z-20 cursor-pointer ">
               <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-green-200">
                 <Sprout className="h-6 w-6 text-green-600 group-hover:scale-110 transition-transform duration-300" />
               </div>
@@ -155,9 +179,8 @@ const Hero: React.FC = () => {
                 </p>
               </div>
             </div>
-
             {/* Card 3: Made in India */}
-            <div className="group absolute bottom-[-60px] right-16 animate-slide-in-bottom bg-white/80 backdrop-blur-sm p-4 pr-6 pl-4 rounded-[20px] shadow-xl flex items-center gap-4 max-w-xs w-[20vw] transition-transform duration-300 will-change-transform hover:-translate-y-3 z-10 hover:z-20 cursor-pointer">
+            <div className="hidden group absolute right-16 bottom-[-50px] md:bottom-[-60px] md:right-16 animate-slide-in-bottom bg-white/80 backdrop-blur-sm p-4 pr-6 pl-4 rounded-[20px] shadow-xl md:flex items-center gap-4 max-w-xs w-[250px] md:w-[20vw] transition-transform duration-300 will-change-transform hover:-translate-y-3 z-10 hover:z-20 cursor-pointer">
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-blue-200">
                 <Droplet className="h-6 w-6 text-blue-600 group-hover:scale-110 transition-transform duration-300" />
               </div>

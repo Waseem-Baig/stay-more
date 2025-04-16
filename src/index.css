@@ -327,6 +327,19 @@ html {
   }
 }
 
+/* styles/globals.css or any imported CSS file */
+/* Global CSS file (e.g. styles/globals.css) */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .shine {
   position: relative;
   overflow: hidden;
@@ -433,10 +446,10 @@ html {
 }
 
 /* For staggered animations */
-.stagger-item {
+/* .stagger-item {
   opacity: 0;
   animation: fadeInStagger 0.5s ease-out forwards;
-}
+} */
 
 @keyframes fadeInStagger {
   from {

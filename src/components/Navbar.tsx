@@ -166,9 +166,9 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
           {/* Mobile Menu Button */}
           <button className="md:hidden" onClick={toggleMenu}>
             {isMenuOpen ? (
-              <X className="h-6 w-6 text-staymore-dark-purple" />
+              <X className="h-6 w-6 text-white" />
             ) : (
-              <Menu className="h-6 w-6 text-staymore-dark-purple" />
+              <Menu className="h-6 w-6 text-white" />
             )}
           </button>
         </div>
@@ -315,7 +315,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
           </div>
         </div>
       </nav>
-      <div className="hidden md:block wave-divider bg-[#844A89]"></div>
+      <div className="wave-divider bg-[#844A89]"></div>
     </div>
   );
 };

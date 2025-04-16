@@ -19,7 +19,7 @@ const TestimonialCard: React.FC<TestimonialProps> = ({
 }) => {
   return (
     <div
-      className="bg-white rounded-lg shadow-md p-6 relative reveal transform transition-transform duration-300 hover:scale-125 hover:shadow-2xl stagger-item"
+      className="bg-white rounded-lg shadow-md p-6 relative reveal transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl stagger-item"
       style={{ animationDelay: `${delay}ms` }}
     >
       <div className="absolute -top-4 -left-4 bg-staymore-pink rounded-full p-2 animate-pulse-soft">
@@ -112,7 +112,7 @@ const Testimonials: React.FC = () => {
         </div>
 
         <div className="text-center max-w-3xl mx-auto reveal fade-in-up">
-          <p className="text-xl italic font-playfair text-staymore-dark-purple mb-8 animate-float">
+          <p className="text-xl italic font-playfair text-staymore-dark-purple mb-8">
             "When women support women, incredible things happen. Join the Stay
             More family and experience the difference."
           </p>

@@ -86,13 +86,13 @@ const MissionPreview: React.FC = () => {
 
           {/* RIGHT SIDE */}
           <div className="order-1 lg:order-2 relative reveal fade-in-left">
-            <div className="relative z-10 rounded-xl overflow-hidden shadow-xl border border-pink-200 transform hover:scale-105 transition duration-500 group">
+            <div className="relative z-10 rounded-xl overflow-hidden transform  transition duration-500 group">
               <div
-                className="w-full h-[400px] bg-[url('/images/pic1.jpg')] bg-no-repeat bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-[400px] bg-[url('/images/pic5.jpg')] bg-no-repeat bg-cover bg-center transition-transform duration-700"
                 role="img"
                 aria-label="Women supporting each other"
               ></div>
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-staymore-dark-purple/60" />
+              {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent to-staymore-dark-purple/60" /> */}
               <div className="absolute bottom-0 left-0 p-6 text-white z-20">
                 <p className="font-bold animate-fade-in">
                   Manufacturing Unit: Made in Andhra Pradesh
@@ -104,7 +104,7 @@ const MissionPreview: React.FC = () => {
             </div>
 
             {/* Floating Make in India Badge */}
-            <div className="absolute -top-6 -right-6 bg-white rounded-lg p-4 shadow-xl transform rotate-3 animate-float">
+            <div className="absolute -top-6 -right-6 bg-white rounded-lg p-4 shadow-xl transform z-10">
               <img
                 src="/images/img2.jpg"
                 alt="Make in India"

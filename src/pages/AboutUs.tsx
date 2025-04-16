@@ -105,7 +105,7 @@ const AboutUs = () => {
             </div>
 
             {/* Floating Make in India Badge */}
-            <div className="absolute -top-6 -right-6 bg-white rounded-lg p-4 shadow-xl transform rotate-3 animate-float">
+            <div className="absolute z-10 -top-6 -right-6 bg-white rounded-lg p-4 shadow-xl transform">
               <img
                 src="/images/img2.jpg"
                 alt="Make in India"

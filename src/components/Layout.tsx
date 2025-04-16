@@ -46,7 +46,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen overflow-x-hidden">
       <Navbar isScrolled={isScrolled} />
       <main className="flex-grow mt-12">{children}</main>
       <Footer />
