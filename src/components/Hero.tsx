@@ -122,62 +122,24 @@ const Hero: React.FC = () => {
           >
             {/* Background Image */}
             <div
-              className="absolute inset-0 bg-center bg-no-repeat z-0 rounded-lg"
-              style={{
-                backgroundImage: "url('/images/pic22.png')",
-                backgroundSize: "contain",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-                backgroundColor: "transparent",
-              }}
+              className="absolute inset-0 z-10 rounded-lg overflow-hidden"
               role="img"
               aria-label="Woman feeling confident and comfortable"
-            ></div>
+            >
+              <video
+                className="w-full h-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+              >
+                <source src="/videos/gif5.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
 
             {/* Overlay */}
             {/* <div className="absolute inset-0 bg-black/10 z-0 rounded-lg"></div> */}
-            {/* Card 1: Empowered Periods */}
-            <div className="group absolute top-5 right-[-50px] md:top-10 md:right-[-20px] animate-slide-in-right bg-white/80 backdrop-blur-sm p-4 pr-6 pl-4 rounded-[20px] shadow-xl flex items-center gap-4 max-w-xs w-[250px] md:w-[20vw] transition-all duration-300 transform hover:-translate-x-3 z-10 hover:z-20 cursor-pointer">
-              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-purple-200">
-                <Users className="h-6 w-6 text-purple-600 group-hover:scale-110 transition-transform duration-300" />
-              </div>
-              <div>
-                <h3 className="text-base font-semibold text-gray-900 group-hover:text-purple-700 transition-colors duration-300">
-                  Empowered Periods
-                </h3>
-                <p className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
-                  We go beyond products—toward education and dignity.
-                </p>
-              </div>
-            </div>
-            {/* Card 2: Kind to Skin */}
-            <div className="group absolute md:bottom-32 md:md:left-[-20px] bottom-20 w-[250px] left-[-30px] animate-slide-in-left bg-white/80 backdrop-blur-sm p-4 pr-6 pl-4 rounded-[20px] shadow-xl flex items-center gap-4 max-w-xs md:w-[20vw] transition-all duration-300 transform hover:translate-x-3 z-10 hover:z-20 cursor-pointer ">
-              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-green-200">
-                <Sprout className="h-6 w-6 text-green-600 group-hover:scale-110 transition-transform duration-300" />
-              </div>
-              <div>
-                <h3 className="text-base font-semibold text-gray-900 group-hover:text-green-700 transition-colors duration-300">
-                  Kind to Skin
-                </h3>
-                <p className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
-                  Soft, safe, and completely chemical-free.
-                </p>
-              </div>
-            </div>
-            {/* Card 3: Made in India */}
-            <div className="hidden group absolute right-16 bottom-[-50px] md:bottom-[-60px] md:right-16 animate-slide-in-bottom bg-white/80 backdrop-blur-sm p-4 pr-6 pl-4 rounded-[20px] shadow-xl md:flex items-center gap-4 max-w-xs w-[250px] md:w-[20vw] transition-transform duration-300 will-change-transform hover:-translate-y-3 z-10 hover:z-20 cursor-pointer">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-blue-200">
-                <Droplet className="h-6 w-6 text-blue-600 group-hover:scale-110 transition-transform duration-300" />
-              </div>
-              <div>
-                <h3 className="text-base font-semibold text-gray-900 group-hover:text-blue-700 transition-colors duration-300">
-                  Made in India
-                </h3>
-                <p className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
-                  Crafted with care, by women and for women.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </div>

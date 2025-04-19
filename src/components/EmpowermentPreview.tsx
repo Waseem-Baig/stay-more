@@ -107,9 +107,9 @@ const EmpowermentPreview: React.FC = () => {
             </div>
           </div>
           <div className="order-1 lg:order-2 relative reveal fade-in-left">
-            <div className="relative rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-500 group">
+            <div className="relative rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-500 group">
               <div
-                className="w-full h-[400px] bg-[url('/images/pic6.jpg')] bg-no-repeat bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-[400px] bg-[url('/images/pic22.png')] bg-no-repeat bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
                 role="img"
                 aria-label="Women empowerment initiative"
               ></div>

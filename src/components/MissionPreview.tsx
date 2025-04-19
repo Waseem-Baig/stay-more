@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Droplet, Sprout, Users } from "lucide-react";
 import { TypeAnimation } from "react-type-animation";
 
 const MissionPreview: React.FC = () => {
@@ -86,21 +86,59 @@ const MissionPreview: React.FC = () => {
 
           {/* RIGHT SIDE */}
           <div className="order-1 lg:order-2 relative reveal fade-in-left">
-            <div className="relative z-10 rounded-xl overflow-hidden transform  transition duration-500 group">
+            <div
+              className="relative z-0 h-[400px] w-auto lg:h-[500px] animate-fade-in-left rounded-lg bg-transparent"
+              style={{ mixBlendMode: "multiply" }}
+            >
               <div
                 className="w-full h-[400px] bg-[url('/images/pic5.jpg')] bg-no-repeat bg-cover bg-center transition-transform duration-700"
                 role="img"
                 aria-label="Women supporting each other"
               ></div>
-              {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent to-staymore-dark-purple/60" /> */}
-              <div className="absolute bottom-0 left-0 p-6 text-white z-20">
-                <p className="font-bold animate-fade-in">
-                  Manufacturing Unit: Made in Andhra Pradesh
-                </p>
-                <p className="animate-fade-in delay-300">
-                  Distribution: PAN India & Rural Networks
-                </p>
+
+              {/* Card 1: Empowered Periods */}
+              <div className="group absolute top-20 right-[-100px] md:top-20 md:right-[-20px] animate-slide-in-right bg-white/80 backdrop-blur-sm p-4 pr-6 pl-4 rounded-[20px] shadow-xl flex items-center gap-4 max-w-xs w-[250px] md:w-[20vw] transition-all duration-300 transform hover:-translate-x-3 z-10 hover:z-20 cursor-pointer">
+                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-purple-200">
+                  <Users className="h-6 w-6 text-purple-600 group-hover:scale-110 transition-transform duration-300" />
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold text-gray-900 group-hover:text-purple-700 transition-colors duration-300">
+                    Empowered Periods
+                  </h3>
+                  <p className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
+                    We go beyond products—toward education and dignity.
+                  </p>
+                </div>
               </div>
+              {/* Card 2: Kind to Skin */}
+              <div className="group absolute md:bottom-48 md:md:left-[-20px] bottom-20 w-[250px] left-[-30px] animate-slide-in-left bg-white/80 backdrop-blur-sm p-4 pr-6 pl-4 rounded-[20px] shadow-xl flex items-center gap-4 max-w-xs md:w-[20vw] transition-all duration-300 transform hover:translate-x-3 z-10 hover:z-20 cursor-pointer ">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-green-200">
+                  <Sprout className="h-6 w-6 text-green-600 group-hover:scale-110 transition-transform duration-300" />
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold text-gray-900 group-hover:text-green-700 transition-colors duration-300">
+                    Kind to Skin
+                  </h3>
+                  <p className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
+                    Soft, safe, and completely chemical-free.
+                  </p>
+                </div>
+              </div>
+              {/* Card 3: Made in India */}
+              <div className="hidden group absolute right-16 bottom-[-50px] md:bottom-[10px] md:right-16 animate-slide-in-bottom bg-white/80 backdrop-blur-sm p-4 pr-6 pl-4 rounded-[20px] shadow-xl md:flex items-center gap-4 max-w-xs w-[250px] md:w-[20vw] transition-transform duration-300 will-change-transform hover:-translate-y-3 z-10 hover:z-20 cursor-pointer">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-blue-200">
+                  <Droplet className="h-6 w-6 text-blue-600 group-hover:scale-110 transition-transform duration-300" />
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold text-gray-900 group-hover:text-blue-700 transition-colors duration-300">
+                    Made in India
+                  </h3>
+                  <p className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
+                    Crafted with care, by women and for women.
+                  </p>
+                </div>
+              </div>
+              {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent to-staymore-dark-purple/60" /> */}
             </div>
 
             {/* Floating Make in India Badge */}
