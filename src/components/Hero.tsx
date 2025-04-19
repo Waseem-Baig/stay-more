@@ -4,21 +4,6 @@ import { TypeAnimation } from "react-type-animation"; // Import the TypeAnimatio
 import React, { useState, useEffect } from "react";
 
 const Hero: React.FC = () => {
-  const phrases = [
-    "S C",
-    "Stay More: Where Comfort is Power",
-    "Stay More: Where Strength is Soft",
-  ];
-
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % phrases.length);
-    }, 4000); // Change every 4s
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <section className="relative min-h-screen flex items-center bg-hero-pattern overflow-hidden pt-16 pb-4">
       <div className="absolute inset-0 bg-gradient-to-r from-staymore-light-pink to-staymore-light-purple/40 z-0"></div>
@@ -31,7 +16,7 @@ const Hero: React.FC = () => {
                 <TypeAnimation
                   sequence={["tay More: Where", 1000, "", 500]}
                   wrapper="h1"
-                  cursor={true}
+                  cursor={false}
                   repeat={Infinity}
                   className="hero-text text-staymore-dark-purple shine"
                   speed={1}
@@ -42,7 +27,7 @@ const Hero: React.FC = () => {
                 <TypeAnimation
                   sequence={["are Meets Courage", 1000, "", 500]}
                   wrapper="h1"
-                  cursor={true}
+                  cursor={false}
                   repeat={Infinity}
                   className="hero-text text-staymore-dark-purple shine"
                   speed={1}

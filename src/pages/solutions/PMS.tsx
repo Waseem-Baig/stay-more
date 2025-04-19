@@ -25,7 +25,7 @@ const PMS = () => {
               <TypeAnimation
                 sequence={["MS", 1000, "", 500]}
                 wrapper="h1"
-                cursor={true}
+                cursor={false}
                 repeat={Infinity}
                 className="hero-text text-staymore-dark-purple shine"
                 speed={1}

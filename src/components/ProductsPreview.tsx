@@ -93,7 +93,7 @@ const ProductsPreview: React.FC = () => {
             <TypeAnimation
               sequence={["rafted for Comfort, Designed for You", 1000, "", 500]}
               wrapper="h2"
-              cursor={true}
+              cursor={false}
               repeat={Infinity}
               className="text-xl md:text-3xl lg:text-4xl font-bold leading-tight md:leading-tight lg:leading-tight text-staymore-dark-purple shine"
               speed={30}
