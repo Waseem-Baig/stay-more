@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-staymore-light-pink to-staymore-light-purple/40 z-0"></div>
       <div className="container mx-auto px-4 z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="animate-fade-in-right">
+          <div className="animate-fade-in-right order-2 lg:order-1">
             <div className="mb-4">
               <div className="flex items-center justify-start">
                 <h1 className="hero-text text-staymore-dark-purple shine">S</h1>
@@ -117,7 +117,7 @@ const Hero: React.FC = () => {
             </div>
           </div>
           <div
-            className="relative z-0 h-[400px] w-auto lg:h-[500px] animate-fade-in-left rounded-lg bg-transparent"
+            className="relative z-0 h-[400px] w-auto lg:h-[500px] animate-fade-in-left rounded-lg bg-transparent order-1 lg:order-2"
             style={{ mixBlendMode: "multiply" }} // Or try 'screen', 'overlay', etc.
           >
             {/* Background Image */}
