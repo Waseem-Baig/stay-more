@@ -1,9 +1,35 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Droplet, Sprout, Users } from "lucide-react";
-import { TypeAnimation } from "react-type-animation"; // Import the TypeAnimation component
-import React, { useState, useEffect } from "react";
+import { TypeAnimation } from "react-type-animation";
+import React, { useEffect, useRef } from "react";
+import Spline from "@splinetool/react-spline";
+
+// Define minimal types for Spline usage
+interface SplineObject {
+  rotation: { x: number; y: number; z: number };
+}
+interface SplineInstance {
+  findObjectByName?: (name: string) => SplineObject | undefined;
+}
 
 const Hero: React.FC = () => {
+  const splineRef = useRef<SplineInstance | null>(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      const spline = splineRef.current;
+      if (!spline) return;
+      const obj = spline.findObjectByName?.("Cube"); // Change "Cube" to your object name
+      if (!obj) return;
+      if (e.key === "ArrowLeft") obj.rotation.y += 0.1;
+      if (e.key === "ArrowRight") obj.rotation.y -= 0.1;
+      if (e.key === "ArrowUp") obj.rotation.x += 0.1;
+      if (e.key === "ArrowDown") obj.rotation.x -= 0.1;
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center bg-hero-pattern overflow-hidden pt-16 pb-4">
       <div className="absolute inset-0 bg-gradient-to-r from-staymore-light-pink to-staymore-light-purple/40 z-0"></div>
@@ -118,7 +144,7 @@ const Hero: React.FC = () => {
           </div>
           <div
             className="relative z-0 h-[400px] w-auto lg:h-[500px] animate-fade-in-left rounded-lg bg-transparent order-1 lg:order-2"
-            style={{ mixBlendMode: "multiply" }} // Or try 'screen', 'overlay', etc.
+            style={{ mixBlendMode: "multiply" }}
           >
             {/* Background Image */}
             <div
@@ -126,16 +152,13 @@ const Hero: React.FC = () => {
               role="img"
               aria-label="Woman feeling confident and comfortable"
             >
-              <video
-                className="w-full h-full object-cover"
-                autoPlay
-                muted
-                loop
-                playsInline
-              >
-                <source src="/videos/gif5.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              <Spline
+                scene="https://prod.spline.design/vsPkB7w166eczh5H/scene.splinecode"
+                style={{ width: "100%", height: "100%" }}
+                onLoad={(spline) => {
+                  splineRef.current = spline as SplineInstance;
+                }}
+              />
             </div>
 
             {/* Overlay */}
