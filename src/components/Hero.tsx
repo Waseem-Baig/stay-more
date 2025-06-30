@@ -153,7 +153,7 @@ const Hero: React.FC = () => {
               aria-label="Woman feeling confident and comfortable"
             >
               <Spline
-                scene="https://prod.spline.design/vsPkB7w166eczh5H/scene.splinecode"
+                scene="https://prod.spline.design/uUr1F0sBvfVUvZcC/scene.splinecode"
                 style={{ width: "100%", height: "100%" }}
                 onLoad={(spline) => {
                   splineRef.current = spline as SplineInstance;
